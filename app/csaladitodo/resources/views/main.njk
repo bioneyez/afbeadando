@@ -1,0 +1,29 @@
+{% extends "layout" %}
+
+{% block content %}
+
+<h1>{{ name }}</h1>
+
+<div class="row">
+
+  {% for category in categories %}
+  {%if category.topTodos.length %}
+  <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">{{ category.name }}</div>
+      <ul class="list-group">
+        {% for todo in category.topTodos %}
+        <li class="list-group-item">
+          <a href="/todos/{{ todo.id }}">
+            {{ todo.name }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+
+</div>
+{% endblock %}
