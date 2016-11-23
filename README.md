@@ -4,19 +4,16 @@ Készítette: Fazakas Loránd
 
 ###1.	Követelményanalízis
 #####1.1.	Célkitűzés, projektindító dokumentum
-A program célja egy könnyen kezelhető és praktikus családi teendő lista. Az adatok védelme érdekében lehetőség lesz regisztrációra, illetve bejelentkezésre. Bejelentkezett felhasználó a családja által létrehozott listákat és a lista elemeket megtekintheti, bővítheti, módosíthatja,törölheti. Ezeken kívűl a teendőkhöz címkét adhat hozzá és törölhet.
+A program célja egy könnyen kezelhető és praktikus családi teendő lista. Az adatok védelme érdekében lehetőség lesz regisztrációra, illetve bejelentkezésre. Bejelentkezett felhasználó a családja által létrehozott teendőket megtekintheti illetve a sajat teendőit bővítheti, módosíthatja, törölheti. Ezeken kívűl a teendőkhöz kategória is hozzárendelhető.
 
 ######Funkcionális követelmények:
 * Regisztráció
 * Bejelentkezés
 * Csak bejelentkezett felhasználók által elérhető funkciók
-  - új lista létrehozása
-  - lista törlése
-  - új teendő felvétele a listába
+  - új teendő létrehozása
+  - teendő törlése
   - a meglévő teendők módosítása
   - a meglévő teendők törlése
-  - címke hozzáadása teendőkhoz
-  - címke törlése egy teendőből
 
 ######Nem funkcionális követelmények:
 *	**Használhatóság:** Könnyű áttekinthetőség, ésszerű elrendezés, könnyen kezelhetőség
@@ -25,8 +22,7 @@ A program célja egy könnyen kezelhető és praktikus családi teendő lista. A
 
 #####1.2.	Szakterületi fogalomjegyzék
 * **New To Do:** Új teendő
-* **Todo list:** Teendő lista
-* **Tag:** Címke
+* **Category:** Kategória
 
 #####1.3.	Használatieset-modell, funkcionális követelmények
 
@@ -38,14 +34,10 @@ A program célja egy könnyen kezelhető és praktikus családi teendő lista. A
 
 **Bejelentkezett felhasználó**: A publikus oldalak elérésén felül egyéb funkciókhoz is hozzáfér.
 
-* Új lista létrehozása
-* Lista törlése
-*	Új teendő felvétele
+*	Új teendő létrehozása
 *	Meglévő teendők megtekintése
-*	Meglévő teendő szerkesztése
-*	Meglévő teendő törlése
-* Címke hozzáadása teendőkhoz
-* Címke törlése egy teendőből
+*	Saját teendő szerkesztése
+*	Saját teendő törlése
 
 
 ![](docs/images/teljes-esetdiagram.png)
@@ -55,8 +47,8 @@ Vegyünk példának egy egyszerű folyamatot:
 **Meglévő teendő szerkesztése:**
 
 1.	A felhasználó az oldalra érkezve, bejelentkezik vagy regisztrál
-2.	Regisztráció után megtekintheti a listákat listázó oldalt, ahol kiválaszthatja a szerkeszteni kívánt listát.
-3.	Megnyomja a „Megtekintés” feliratú gombot
+2.	Regisztráció után megtekintheti a teendőket listázó oldalt, ahol kiválaszthatja a szerkeszteni kívánt teendőt.
+3.	Rákattint a teendő nevére
 4.	A megtekintés oldalon kiválaszthatja a „Szerkesztés” gombot
 5.	Szerkesztés oldalon felviszi az új adatokat
 6.	Submit gombra kattintva elmenti a változásokat
@@ -79,36 +71,28 @@ Vegyünk példának egy egyszerű folyamatot:
 * Regisztráció
 
 **Bejelentkezett:**
-* Főoldal
-* Listaoldal
-  * Új lista létrehozása
-  * Lista törlése
-  * Lista megtekintése
-    * Teendő felvétele
-    * Teendő törlése
-    * Teendő szerkesztése
-    * Címke hozzáadása
-    * Címke törlése
+* Teendők megtekintése
+* Saját teendők megtekintése
+  * Új teendő létrehozása
+  * Teendő törlése
+  * Teendő megtekintése
+  * Teendő szerkesztése
 
 ######2.1.3. Végpontok
 
-* GET/: főoldal
+* GET/: teendők megtekintése oldal
 * GET/login: bejelentkező oldal
 * POST/login: bejelentkező adatok felküldése
-* GET/login/signup: regisztrációs oldal
-* POST/login/signup: regisztrációs adatok felküldése
+* GET/register: regisztrációs oldal
+* POST/register: regisztrációs adatok felküldése
 * GET/logout: kijelentkező oldal
-* GET/lists/list: listak oldal
-* GET/lists/new: új lista felvétele
-* POST/lists/new: új lista felvételéhez szükséges adatok felküldése
-* GET/lists/id: lista adatok
-* GET/tags/id: címke adatok
-* POST/tags/id: új címke felvitele
-* GET/todoItem/new: új teendő felvétele
-* POST/todoItem/new: új teendő felvételéhez szükséges adatok felküldése
-* GET/todoItem/delete=id: teendő törlése
-* GET/todoItem/edit=id: teendő módosítása
-* POST/todoItem/edit=id: teendő módosítása, adatok felküldése
+* GET/ownTodos/: saját todok megtekintése oldal
+* GET/todos/create: új teendő felvétele
+* POST/todos/create: új teendő felvételéhez szükséges adatok felküldése
+* GET/todos/id: todo adatok
+* GET/todos/id/delete: teendő törlése
+* GET/todos/id/edit: teendő módosítása
+* POST/todos/id/edit: teendő módosítása, adatok felküldése
 
 #####2.2. Felhasználói-felület modell
 
