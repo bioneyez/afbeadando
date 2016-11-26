@@ -113,7 +113,7 @@ Vegyünk példának egy egyszerű folyamatot:
 ![](docs/images/kepernyokep/teendokmegtekintese.png)
 
 **Teendő megtekintése**
-![](docs/images/kepernyokep/teendomegtekintese.png)
+![](docs/images/kepernyokep/teendomegtekintes.png)
 
 ######2.2.2.Designtervek (végső megvalósítás kinézete):
 
