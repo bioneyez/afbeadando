@@ -106,17 +106,14 @@ Vegyünk példának egy egyszerű folyamatot:
 **Bejelentkező oldal**
 ![](docs/images/kepernyokep/bejelentkezes.png)
 
-**Listaoldal**
-![](docs/images/kepernyokep/listaoldal.png)
-
-**Új lista felvétele**
-![](docs/images/kepernyokep/ujlista.png)
-
-**Lista megtekintése**
-![](docs/images/kepernyokep/teendokoldal.png)
-
 **Új teendő felvétele**
 ![](docs/images/kepernyokep/ujteendo.png)
+
+**Teendők megtekintése**
+![](docs/images/kepernyokep/teendokmegtekintese.png)
+
+**Teendő megtekintése**
+![](docs/images/kepernyokep/teendomegtekintese.png)
 
 ######2.2.2.Designtervek (végső megvalósítás kinézete):
 
