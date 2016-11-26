@@ -167,10 +167,9 @@ Vegyünk példának egy egyszerű folyamatot:
 
 1. Böngészőben nyissuk meg a főoldalt
 2. Jobb felső sarokban kattintsunk a Bejelentkezés feliratra
-3. Bejelentkezés/Regisztráció után a Listak oldalra jutunk
-4. Listak oldalon: Törlés gombra kattintva törölhetjük a listát
-5. Listak oldalon: Megtekint gombra kattintva a megtekintés oldalra jutunk
-6. Megtekintés oldalon található a szerkesztés gomb
-7. Szerkesztés oldal: módosithatunk a teendok leirasan es cimkein
-8. Megtekintés oldalon található a új teendő gomb
-9. Új teendő oldal: megadhatjuk a teendő leirasat és címkéket is választhatunk neki
+3. Bejelentkezés/Regisztráció után a Teendők megtekintése oldalra jutunk
+4. Teendők megtekintése oldalon: Egy teendő nevére rakattintva megtekinthetjuk a reszleteit
+5. Megtekintés oldalon található a szerkesztés gomb
+6. Szerkesztés oldal: módosithatunk a teendok leirasan es cimkein
+7. Megtekintés oldalon található a új teendő gomb
+8. Új teendő oldal: megadhatjuk a teendő leirasat és címkéket is választhatunk neki
