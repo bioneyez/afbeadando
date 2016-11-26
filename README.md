@@ -61,7 +61,7 @@ Vegyünk példának egy egyszerű folyamatot:
 
 ######2.1.1. Komponensdiagram
 
-![](docs/images/komponensdiagram1.png)
+![](docs/images/komponensdiagram.png)
 
 ######2.1.2. Oldaltérkép:
 
