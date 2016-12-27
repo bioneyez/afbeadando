@@ -4,6 +4,7 @@ const Database = use('Database')
 const Category = use('App/Model/Category')
 const Todo = use('App/Model/Todo')
 const Validator = use('Validator')
+const User = use('App/Model/User')
 
 class TodoController {
     * index (request,response) {
@@ -140,6 +141,35 @@ class TodoController {
         categories: categories.toJSON()
         })  
     }
+
+
+    * ajaxDelete(request, response) {
+        console.log('Test from ajaxDelete.');
+
+        const id = request.param('id');
+        const todo = yield Todo.find(id);
+
+        if (todo)
+        {
+        if (request.currentUser.id !== todo.user_id)
+        {
+            request.unauthorized('Nem törölheted!');
+            return;
+        }
+
+        yield todo.delete()
+
+        response.ok(
+            {
+            succes: true
+            }
+        )
+
+        return;
+        }
+
+        response.notFound('Nincs ilyen teendo!');
+  }
   
 }
 

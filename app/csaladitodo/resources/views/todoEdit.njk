@@ -19,7 +19,7 @@
 {% endif %}
 
 
-<form class="form-horizontal" method="post">
+<form id="editForm" class="form-horizontal" method="post" data-toggle="validator">
 
   {{ csrfField }}
 
@@ -53,9 +53,29 @@
   <div class="form-group">
     <div class="col-lg-10 col-lg-offset-2">
       <button type="reset" class="btn btn-default">Mégsem</button>
-      <button type="submit" class="btn btn-primary">Küldés</button>
+      <button id="btnSave" type="submit" class="btn btn-primary">Küldés</button>
     </div>
   </div>
 </form>
 
+
+<div class="modal fade confirm-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+        <div class="modal-body">
+            Biztosan menteni szeretned a valtoztatasokat?
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success modal-ok" data-dismiss="modal">Mentes</button>
+            <button type="button" class="btn btn-danger modal-cancel" data-dismiss="modal">Mégse</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+<script src="/scripts/save.js"></script>
 {% endblock %}

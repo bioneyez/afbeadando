@@ -7,7 +7,7 @@
 <div class="row">
 
   {% for category in categories %}
-  {%if category.topTodos.length %}
+  {%if category.topTodos.length > 0 %}
   <div class="col-lg-4 col-md-6 col-sm-12">
     <div class="panel panel-primary">
       <div class="panel-heading">{{ category.name }}</div>
@@ -26,4 +26,7 @@
   {% endfor %}
 
 </div>
+{% endblock %}
+
+{% block scripts %}
 {% endblock %}

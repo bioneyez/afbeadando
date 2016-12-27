@@ -93,6 +93,27 @@ class UserController {
     response.redirect('/')
   }
 
+  * ajaxLogin(request, response) {
+    const email = request.input('email');
+    const password = request.input('password');
+
+    const login = yield request.auth.attempt(email, password);
+
+    try
+    {
+      if (login)
+      {
+        response.send({ success: true });
+        return;
+      }
+    }
+    catch(err)
+    {
+
+    }
+
+      response.send({ success: false });
+  }
     
 }
 

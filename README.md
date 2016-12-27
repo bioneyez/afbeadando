@@ -147,11 +147,39 @@ Vegyünk példának egy egyszerű folyamatot:
 
 ######3.1.2. Könyvtárstruktúra, funkciók
 
+* **csaladitodo**
+  * **controllers**
+    * _TodoController.js_
+    * _UserController.js_
+  * **models**
+    * _Todo.js_
+    * _Category.js_
+    * _Token.js_
+    * _User.js_
+  * **views**: njk fajlok
+    * _layout.njk_
+    * _login.njk_
+    * _main.njk_
+    * _master.njk_
+    * _register.njk_
+    * _todoCreate.njk_
+    * _todoEdit.njk_
+    * _todos.njk_
+    * _todoShow.njk_
+
 ###4.	Tesztelés
-#####4.1. Tesztelési környezetek
-#####4.2. Egységteszt
-#####4.3. Funkciónális teszetelés
-#####4.4.Tesztesetek
+ * Feltelepitjuk a Mozzila Firefox bongeszonkbe a Selenium IDE bovitmenyt.
+ * A Selenium IDE-t megnyitva es majd a file/open-t kivalasztva a tests mappaban levo html fajlokat meg tudjuk nyitni.
+ * Ezutan a zold nyillal lefuttathatjuk a tesztet.
+
+#####4.1.Tesztesetek
+* indexTest: fooldal megnyitasanak tesztje
+* loginTest: bejelentkezes tesztje
+* logoutTest: bejelentkezes majd kijelentkezes tesztje
+* todoCreate: bejelentkezes majd uj teendo letrehozasanak a tesztje
+* todoCreateAndDelete: bejelentkezes majd uj teendo letrehozasa es azon teendo torlese
+* todoShowTest: Nappali todo megtekintese
+
 ###5.	Felhasználói dokumentáció
 
 **Futtatáshoz szükséges operációs rendszer:** Tetszőleges operációs rendszer
@@ -165,8 +193,7 @@ Vegyünk példának egy egyszerű folyamatot:
 1. Böngészőben nyissuk meg a főoldalt
 2. Jobb felső sarokban kattintsunk a Bejelentkezés feliratra
 3. Bejelentkezés/Regisztráció után a Teendők megtekintése oldalra jutunk
-4. Teendők megtekintése oldalon: Egy teendő nevére rakattintva megtekinthetjuk a reszleteit
+4. Todok bongeszese oldalon: Egy teendő nevére rakattintva megtekinthetjuk a reszleteit
 5. Megtekintés oldalon található a szerkesztés gomb
-6. Szerkesztés oldal: módosithatunk a teendok leirasan es cimkein
-7. Megtekintés oldalon található a új teendő gomb
-8. Új teendő oldal: megadhatjuk a teendő leirasat és címkéket is választhatunk neki
+6. Szerkesztés oldal: módosithatunk a teendok neven, leirasan es kategoriajan. Mindegyiket kotelezo megadni ezt a rendszer ellenorzi
+8. Todo letrehozasa oldal: megadhatjuk a teendő nevet,leirasat és címkéket is választhatunk neki

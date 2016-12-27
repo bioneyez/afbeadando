@@ -37,4 +37,9 @@ Route.post('/todos/:id/edit', 'TodoController.doEdit').middleware('auth')
 Route.get('/todos/:id', 'TodoController.show')
 
 
+Route.group('ajax', function () {
+  Route.delete('/todos/:id/delete', 'TodoController.ajaxDelete').middleware('auth')
+  Route.post('/login', 'UserController.ajaxLogin')
+}).prefix('/ajax');
+
 
